@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище schoolModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CategoryEmployeeStaff">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CategoryProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CharacteristicProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Client">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="SecondName" Type="nvarchar(max)" />
+    <Property Name="DateBirth" Type="datetime" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Mail" Type="nvarchar(max)" />
+    <Property Name="Sex" Type="nvarchar(max)" />
+    <Property Name="Photo" Type="nvarchar(max)" />
+    <Property Name="FirstDateCome" Type="datetime" />
+    <Property Name="IdTag" Type="int" />
+  </EntityType>
+  <EntityType Name="Code">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="EmployeeStaff">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar(max)" />
+    <Property Name="SecondName" Type="nvarchar(max)" />
+    <Property Name="SeriaPas" Type="int" />
+    <Property Name="NumberPas" Type="int" />
+    <Property Name="IdCode" Type="int" />
+    <Property Name="Sex" Type="nvarchar(max)" />
+    <Property Name="KoefOplata" Type="int" />
+    <Property Name="DateBirth" Type="datetime" />
+    <Property Name="IdCategoryEmployeeStaff" Type="int" />
+  </EntityType>
+  <EntityType Name="EntryServiceClient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="IdClient" Type="int" />
+    <Property Name="IdService" Type="int" />
+    <Property Name="DateTimeStart" Type="datetime" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="EntryServiceClientFile">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="File" Type="nvarchar(max)" />
+    <Property Name="IdEntryServiceClient" Type="int" />
+  </EntityType>
+  <EntityType Name="HistoryPurchase">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="IdProduct" Type="int" />
+    <Property Name="Count" Type="int" />
+    <Property Name="IdClient" Type="int" />
+    <Property Name="IdService" Type="int" />
+  </EntityType>
+  <EntityType Name="Manufacturer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="DateStartWork" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="IdCategory" Type="int" />
+    <Property Name="Cost" Type="nvarchar(max)" />
+    <Property Name="IdCharacteristicsProduct" Type="int" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="IdSizeProduct" Type="int" />
+    <Property Name="Weidth" Type="int" />
+    <Property Name="IdManufacturer" Type="int" />
+    <Property Name="MainPhoto" Type="nvarchar(max)" />
+    <Property Name="IdStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="ProductOtherPhoto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar(max)" />
+    <Property Name="IdProduct" Type="int" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="FullDescription" Type="nvarchar(max)" />
+    <Property Name="Cost" Type="int" />
+    <Property Name="Sale" Type="int" />
+    <Property Name="Countinios" Type="int" />
+    <Property Name="MainPhoto" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ServiceOtherPhoto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar(max)" />
+    <Property Name="IdService" Type="int" />
+  </EntityType>
+  <EntityType Name="SizeProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Height" Type="nvarchar(max)" />
+    <Property Name="Width" Type="nvarchar(max)" />
+    <Property Name="Length" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="StatusProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Color" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_Client_Tag">
+    <End Role="Tag" Type="Self.Tag" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Client" Type="Self.Client" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tag">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Client">
+        <PropertyRef Name="IdTag" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EmployeeStaff_CategoryEmployeeStaff">
+    <End Role="CategoryEmployeeStaff" Type="Self.CategoryEmployeeStaff" Multiplicity="0..1" />
+    <End Role="EmployeeStaff" Type="Self.EmployeeStaff" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryEmployeeStaff">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EmployeeStaff">
+        <PropertyRef Name="IdCategoryEmployeeStaff" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EntryServiceClientFile_EntryServiceClient">
+    <End Role="EntryServiceClient" Type="Self.EntryServiceClient" Multiplicity="0..1" />
+    <End Role="EntryServiceClientFile" Type="Self.EntryServiceClientFile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EntryServiceClient">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EntryServiceClientFile">
+        <PropertyRef Name="IdEntryServiceClient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HistoryPurchase_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="HistoryPurchase" Type="Self.HistoryPurchase" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="HistoryPurchase">
+        <PropertyRef Name="IdProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_CategoryProduct">
+    <End Role="CategoryProduct" Type="Self.CategoryProduct" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CategoryProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="IdCategory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_CharacteristicProduct">
+    <End Role="CharacteristicProduct" Type="Self.CharacteristicProduct" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CharacteristicProduct">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="IdCharacteristicsProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductOtherPhoto_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="ProductOtherPhoto" Type="Self.ProductOtherPhoto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ProductOtherPhoto">
+        <PropertyRef Name="IdProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ServiceOtherPhoto_Service">
+    <End Role="Service" Type="Self.Service" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ServiceOtherPhoto" Type="Self.ServiceOtherPhoto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Service">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ServiceOtherPhoto">
+        <PropertyRef Name="IdService" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище schoolModelContainer">
+    <EntitySet Name="CategoryEmployeeStaff" EntityType="Self.CategoryEmployeeStaff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CategoryProduct" EntityType="Self.CategoryProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CharacteristicProduct" EntityType="Self.CharacteristicProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Client" EntityType="Self.Client" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Code" EntityType="Self.Code" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmployeeStaff" EntityType="Self.EmployeeStaff" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EntryServiceClient" EntityType="Self.EntryServiceClient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EntryServiceClientFile" EntityType="Self.EntryServiceClientFile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HistoryPurchase" EntityType="Self.HistoryPurchase" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manufacturer" EntityType="Self.Manufacturer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductOtherPhoto" EntityType="Self.ProductOtherPhoto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Service" EntityType="Self.Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceOtherPhoto" EntityType="Self.ServiceOtherPhoto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SizeProduct" EntityType="Self.SizeProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusProduct" EntityType="Self.StatusProduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tag" EntityType="Self.Tag" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Client_Tag" Association="Self.FK_Client_Tag">
+      <End Role="Tag" EntitySet="Tag" />
+      <End Role="Client" EntitySet="Client" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EmployeeStaff_CategoryEmployeeStaff" Association="Self.FK_EmployeeStaff_CategoryEmployeeStaff">
+      <End Role="CategoryEmployeeStaff" EntitySet="CategoryEmployeeStaff" />
+      <End Role="EmployeeStaff" EntitySet="EmployeeStaff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EntryServiceClientFile_EntryServiceClient" Association="Self.FK_EntryServiceClientFile_EntryServiceClient">
+      <End Role="EntryServiceClient" EntitySet="EntryServiceClient" />
+      <End Role="EntryServiceClientFile" EntitySet="EntryServiceClientFile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HistoryPurchase_Product" Association="Self.FK_HistoryPurchase_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="HistoryPurchase" EntitySet="HistoryPurchase" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_CategoryProduct" Association="Self.FK_Product_CategoryProduct">
+      <End Role="CategoryProduct" EntitySet="CategoryProduct" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_CharacteristicProduct" Association="Self.FK_Product_CharacteristicProduct">
+      <End Role="CharacteristicProduct" EntitySet="CharacteristicProduct" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductOtherPhoto_Product" Association="Self.FK_ProductOtherPhoto_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductOtherPhoto" EntitySet="ProductOtherPhoto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ServiceOtherPhoto_Service" Association="Self.FK_ServiceOtherPhoto_Service">
+      <End Role="Service" EntitySet="Service" />
+      <End Role="ServiceOtherPhoto" EntitySet="ServiceOtherPhoto" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
