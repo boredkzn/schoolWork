@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5f5f1109bc2b4bf18df4aaf6ee1dd369" Name="Diagram1">
+        <EntityTypeShape EntityType="schoolModel.CategoryEmployeeStaff" Width="1.5" PointX="10.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.CategoryProduct" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.CharacteristicProduct" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.Client" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.Code" Width="1.5" PointX="7.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.EmployeeStaff" Width="1.5" PointX="13" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.EntryServiceClient" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.EntryServiceClientFile" Width="1.5" PointX="10" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.HistoryPurchase" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.Manufacturer" Width="1.5" PointX="5.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.Product" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.ProductOtherPhoto" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.Service" Width="1.5" PointX="5.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.ServiceOtherPhoto" Width="1.5" PointX="8" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.SizeProduct" Width="1.5" PointX="7.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.StatusProduct" Width="1.5" PointX="10.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="schoolModel.Tag" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="schoolModel.FK_EmployeeStaff_CategoryEmployeeStaff" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_Product_CategoryProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_Product_CharacteristicProduct" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_Client_Tag" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_EntryServiceClientFile_EntryServiceClient" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_HistoryPurchase_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_ProductOtherPhoto_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="schoolModel.FK_ServiceOtherPhoto_Service" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
